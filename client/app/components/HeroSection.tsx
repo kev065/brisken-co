@@ -131,23 +131,6 @@ export function HeroSection() {
                     Call Us for Enquiries
                   </Button>
                 </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Button
-                    size="lg"
-                    radius="md"
-                    variant="outline"
-                    style={{
-                      color: 'white',
-                      borderColor: 'white',
-                    }}
-                    fw={600}
-                  >
-                    Learn More
-                  </Button>
-                </motion.div>
               </Group>
             </motion.div>
           </Stack>
