@@ -30,7 +30,7 @@ export function HeroSection() {
       style={{
         background: 'linear-gradient(135deg, #2196f3 0%, #42a5f5 50%, #64b5f6 100%)',
         color: 'white',
-        minHeight: '80vh',
+        minHeight: '60vh',
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
@@ -94,6 +94,7 @@ export function HeroSection() {
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
+                  fontSize: 'clamp(1.75rem, 5vw, 4rem)',
                 }}
               >
                 Premium Poultry Solutions for Kenyan Families
