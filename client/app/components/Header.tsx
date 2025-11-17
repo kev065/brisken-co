@@ -16,9 +16,8 @@ import { motion } from 'framer-motion';
 
 const navLinks = [
   { label: 'About Us', href: '#about' },
-  { label: 'Explore', href: '#explore' },
+  { label: 'Explore', href: '#opportunities' },
   { label: 'Sustainability', href: '#sustainability' },
-  { label: 'Opportunities', href: '#opportunities' },
   { label: 'Nutrition', href: '#nutrition' },
   { label: 'Contact', href: '#contact' },
 ];
