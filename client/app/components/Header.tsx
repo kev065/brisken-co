@@ -38,7 +38,20 @@ export function NavigationHeader() {
   };
 
   return (
-    <Box h={80} style={{ borderBottom: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+    <Box
+      h={80}
+      style={{
+        borderBottom: 'none',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        width: '100%',
+        zIndex: 2000,
+        backgroundColor: 'white',
+      }}
+    >
       <Container size="lg" h="100%">
         <Group justify="space-between" align="center" h="100%">
           <motion.div
@@ -87,6 +100,7 @@ export function NavigationHeader() {
             padding="md"
             size="100%"
             position="right"
+            zIndex={4000}
           >
             <Stack gap="md">
               {navLinks.map((link) => (
