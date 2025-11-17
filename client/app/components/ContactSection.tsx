@@ -137,16 +137,6 @@ export function ContactSection() {
           {/* Section Header */}
           <motion.div variants={itemVariants} style={{ marginBottom: '60px', textAlign: 'center' }}>
             <Stack gap={12} align="center">
-              <Badge
-                size="lg"
-                style={{
-                  background: 'rgba(255, 255, 255, 0.2)',
-                  color: 'white',
-                  border: '2px solid rgba(255, 165, 0, 0.5)',
-                }}
-              >
-                Get In Touch
-              </Badge>
               <Text
                 size="2.5rem"
                 fw={800}
@@ -157,7 +147,7 @@ export function ContactSection() {
                   backgroundClip: 'text',
                 }}
               >
-                Contact Brisken Limited
+                Contact Us
               </Text>
               <Text size="lg" opacity={0.95}>
                 Have questions? Reach out to us and we'll get back to you as soon as possible
