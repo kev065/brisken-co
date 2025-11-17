@@ -3,13 +3,13 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import {
-  Header,
   Container,
   Group,
   Burger,
   Drawer,
   Stack,
   Text,
+  Box,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { motion } from 'framer-motion';
