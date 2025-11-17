@@ -6,3 +6,4 @@ export { ExploreSection } from './ExploreSection';
 export { NutritionSection } from './NutritionSection';
 export { BiosecuritySection } from './BiosecuritySection';
 export { ContactSection } from './ContactSection';
+export { BackToTopButton } from './BackToTopButton';

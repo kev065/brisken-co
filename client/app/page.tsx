@@ -9,6 +9,7 @@ import {
   BiosecuritySection,
   ContactSection,
   Footer,
+  BackToTopButton,
 } from './components';
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <BiosecuritySection />
       <ContactSection />
       <Footer />
+      <BackToTopButton />
     </main>
   );
 }
