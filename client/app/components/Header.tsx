@@ -84,7 +84,6 @@ export function NavigationHeader() {
           <Drawer
             opened={opened}
             onClose={close}
-            title="Menu"
             padding="md"
             size="100%"
             position="right"
