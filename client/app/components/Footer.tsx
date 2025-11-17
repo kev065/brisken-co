@@ -67,15 +67,21 @@ export function Footer() {
                 <Text fw={700} size="sm" mb="sm">
                   QUICK LINKS
                 </Text>
-                <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
-                  About Us
-                </Text>
-                <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
-                  Products
-                </Text>
-                <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
-                  Contact
-                </Text>
+                <a href="#about" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
+                    About Us
+                  </Text>
+                </a>
+                <a href="#nutrition" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
+                    Products
+                  </Text>
+                </a>
+                <a href="#contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
+                    Contact
+                  </Text>
+                </a>
               </Stack>
             </motion.div>
           </Group>
