@@ -32,6 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ paddingTop: '80px' }}
       >
         <MantineProvider theme={theme}>
           {children}
