@@ -55,7 +55,7 @@ export function AboutSection() {
       <Container size="lg">
         <motion.div
           variants={containerVariants}
-          initial="hidden"
+          initial="visible"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
         >

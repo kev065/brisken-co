@@ -48,23 +48,8 @@ export function NavigationHeader() {
           >
             <Link href="/" style={{ textDecoration: 'none' }}>
               <Group gap={8}>
-                <div
-                  style={{
-                    width: 40,
-                    height: 40,
-                    borderRadius: '50%',
-                    background: 'linear-gradient(135deg, #ffa500, #ffed1a)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <Text fw={700} c="white" size="sm">
-                    B
-                  </Text>
-                </div>
                 <Text fw={700} size="lg" style={{ color: '#ffa500' }}>
-                  Brisken
+                  Brisken Ltd
                 </Text>
               </Group>
             </Link>
