@@ -16,9 +16,8 @@ import { motion } from 'framer-motion';
 
 const navLinks = [
   { label: 'About Us', href: '#about' },
-  { label: 'Explore', href: '#explore' },
+  { label: 'Explore', href: '#opportunities' },
   { label: 'Sustainability', href: '#sustainability' },
-  { label: 'Opportunities', href: '#opportunities' },
   { label: 'Nutrition', href: '#nutrition' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -39,7 +38,7 @@ export function NavigationHeader() {
   };
 
   return (
-    <Header height={80} style={{ borderBottom: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+    <Box h={80} style={{ borderBottom: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
       <Container size="lg" h="100%">
         <Group justify="space-between" align="center" h="100%">
           <motion.div
@@ -125,6 +124,6 @@ export function NavigationHeader() {
           </Drawer>
         </Group>
       </Container>
-    </Header>
+    </Box>
   );
 }
