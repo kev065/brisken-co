@@ -12,9 +12,10 @@ import {
   Textarea,
   Button,
   Grid,
+  Notification,
 } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { IconPhone, IconMapPin, IconMail, IconClock } from '@tabler/icons-react';
+import { IconPhone, IconMapPin, IconClock } from '@tabler/icons-react';
 import { useState } from 'react';
 
 export function ContactSection() {
@@ -24,6 +25,11 @@ export function ContactSection() {
     phone: '',
     message: '',
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -66,10 +72,49 @@ export function ContactSection() {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+    setIsLoading(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const formDataToSubmit = new FormData(e.currentTarget);
+      formDataToSubmit.append('access_key', 'e217281f-07b1-4b01-a421-01d9529ddba2');
+
+      const object = Object.fromEntries(formDataToSubmit);
+      const json = JSON.stringify(object);
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: json,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Message sent successfully! We will contact you shortly.',
+        });
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: 'Failed to send message. Please try again.',
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'An error occurred. Please try again later.',
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -194,6 +239,16 @@ export function ContactSection() {
                     </Text>
                   </div>
 
+                  {submitStatus.type && (
+                    <Notification
+                      color={submitStatus.type === 'success' ? 'green' : 'red'}
+                      title={submitStatus.type === 'success' ? 'Success' : 'Error'}
+                      onClose={() => setSubmitStatus({ type: null, message: '' })}
+                    >
+                      {submitStatus.message}
+                    </Notification>
+                  )}
+
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -202,9 +257,11 @@ export function ContactSection() {
                     <TextInput
                       label="Full Name"
                       placeholder="Your name"
+                      name="name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.currentTarget.value })}
                       radius="md"
+                      required
                     />
                   </motion.div>
 
@@ -216,9 +273,12 @@ export function ContactSection() {
                     <TextInput
                       label="Email Address"
                       placeholder="your.email@example.com"
+                      name="email"
+                      type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.currentTarget.value })}
                       radius="md"
+                      required
                     />
                   </motion.div>
 
@@ -230,6 +290,7 @@ export function ContactSection() {
                     <TextInput
                       label="Phone Number"
                       placeholder="Your phone number"
+                      name="phone"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.currentTarget.value })}
                       radius="md"
@@ -244,12 +305,14 @@ export function ContactSection() {
                     <Textarea
                       label="Message"
                       placeholder="Tell us how we can help"
+                      name="message"
                       minRows={4}
                       value={formData.message}
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.currentTarget.value })
                       }
                       radius="md"
+                      required
                     />
                   </motion.div>
 
@@ -262,13 +325,15 @@ export function ContactSection() {
                       size="lg"
                       radius="md"
                       fullWidth
+                      loading={isLoading}
+                      disabled={isLoading}
                       style={{
                         background: 'linear-gradient(135deg, #ffa500, #ff8c00)',
                         border: 'none',
                       }}
                       fw={600}
                     >
-                      Send Message
+                      {isLoading ? 'Sending...' : 'Send Message'}
                     </Button>
                   </motion.div>
                 </Stack>
