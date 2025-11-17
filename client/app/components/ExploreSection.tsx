@@ -2,7 +2,7 @@
 
 import { Container, Stack, Text, Box, Card, Grid, Badge, Group } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { IconLightbulb, IconTrendingUp, IconUsers, IconTarget } from '@tabler/icons-react';
+import { IconBulb, IconTrendingUp, IconUsers, IconTarget } from '@tabler/icons-react';
 
 export function ExploreSection() {
   const containerVariants = {
@@ -21,7 +21,7 @@ export function ExploreSection() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
+      transition: { duration: 0.6 },
     },
   };
 
@@ -63,7 +63,7 @@ export function ExploreSection() {
       ],
     },
     {
-      icon: IconLightbulb,
+      icon: IconBulb,
       title: 'Custom Solutions',
       description:
         'Looking for something specific? We offer custom feed formulations and tailored packages for unique needs.',

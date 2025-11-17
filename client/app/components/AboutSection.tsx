@@ -2,7 +2,7 @@
 
 import { Container, Stack, Text, Box, Card, Group, Badge } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { IconPackage, IconTruck, IconCheckCircle } from '@tabler/icons-react';
+import { IconPackage, IconTruck, IconCircleCheck } from '@tabler/icons-react';
 
 export function AboutSection() {
   const containerVariants = {
@@ -21,7 +21,7 @@ export function AboutSection() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
+      transition: { duration: 0.6 },
     },
   };
 
@@ -37,7 +37,7 @@ export function AboutSection() {
       description: 'Fast delivery and consistent availability',
     },
     {
-      icon: IconCheckCircle,
+      icon: IconCircleCheck,
       title: 'Trusted Partner',
       description: 'Supporting Kenyan farmers for years',
     },
