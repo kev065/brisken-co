@@ -5,6 +5,7 @@ import "@mantine/core/styles.css";
 import "./globals.css";
 import { theme } from "./theme";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
+import { MicrosoftClarity } from "./components/MicrosoftClarity";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <GoogleAnalytics />
+        <MicrosoftClarity />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
