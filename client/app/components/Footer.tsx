@@ -54,6 +54,11 @@ export function Footer() {
                 <Text fw={700} size="sm" mb="sm">
                   CONTACT
                 </Text>
+                <a href="tel:+254769412626" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
+                    +254 769 412626
+                  </Text>
+                </a>
                 <Text size="sm" opacity={0.9}>
                   P.O BOX 7682 -30100
                 </Text>
@@ -105,6 +110,11 @@ export function Footer() {
                 <Text fw={700} size="sm" mb="sm">
                   CONTACT
                 </Text>
+                <a href="tel:+254769412626" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
+                    +254769412626
+                  </Text>
+                </a>
                 <Text size="sm" opacity={0.9}>
                   P.O BOX 7682 -30100
                 </Text>
