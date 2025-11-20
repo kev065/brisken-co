@@ -28,7 +28,6 @@ export function HeroSection() {
     <Box
       component="section"
       style={{
-        background: 'linear-gradient(135deg, #2196f3 0%, #42a5f5 50%, #64b5f6 100%)',
         color: 'white',
         minHeight: '60vh',
         display: 'flex',
@@ -37,6 +36,36 @@ export function HeroSection() {
         position: 'relative',
       }}
     >
+      {/* Background image with overlay */}
+      <Box
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundImage: 'url(/images/chicken1.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center right',
+          backgroundAttachment: 'fixed',
+          opacity: 1,
+          zIndex: 0,
+        }}
+      />
+
+      {/* Blue gradient overlay to ensure readability and maintain theme */}
+      <Box
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'linear-gradient(135deg, rgba(33, 150, 243, 0.01) 0%, rgba(66, 165, 245, 0.01) 50%, rgba(100, 181, 246, 0.01) 100%)',
+          zIndex: 0,
+        }}
+      />
+
       {/* Animated background circles */}
       <motion.div
         style={{
@@ -79,21 +108,12 @@ export function HeroSection() {
         >
           <Stack gap={30}>
             <motion.div variants={itemVariants}>
-              <Text size="sm" fw={600} opacity={0.95}>
-                Welcome to Brisken Limited
-              </Text>
-            </motion.div>
-
-            <motion.div variants={itemVariants}>
               <Text
                 size="4rem"
                 fw={800}
                 lh={1.1}
+                c="white"
                 style={{
-                  background: 'linear-gradient(135deg, #fff 0%, #fffacd 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
                   fontSize: 'clamp(1.75rem, 5vw, 4rem)',
                 }}
               >
@@ -102,7 +122,7 @@ export function HeroSection() {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Text size="lg" opacity={0.95} maw={600}>
+              <Text size="lg" opacity={0.95} maw={600} c="white">
                 Quality day-old chicks, fresh eggs, and premium feed. Your trusted partner in
                 poultry production, delivering affordable, healthy produce to families while
                 supporting livelihoods.
