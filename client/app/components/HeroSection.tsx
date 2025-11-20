@@ -115,6 +115,7 @@ export function HeroSection() {
                 c="white"
                 style={{
                   fontSize: 'clamp(1.75rem, 5vw, 4rem)',
+                  textShadow: '0 2px 8px rgba(0, 0, 0, 0.7), 0 4px 12px rgba(0, 0, 0, 0.5)',
                 }}
               >
                 Premium Poultry Solutions for Kenyan Families
@@ -122,7 +123,15 @@ export function HeroSection() {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Text size="lg" opacity={0.95} maw={600} c="white">
+              <Text 
+                size="lg" 
+                opacity={0.95} 
+                maw={600} 
+                c="white"
+                style={{
+                  textShadow: '0 2px 6px rgba(0, 0, 0, 0.7), 0 3px 10px rgba(0, 0, 0, 0.5)',
+                }}
+              >
                 Quality day-old chicks, fresh eggs, and premium feed. Your trusted partner in
                 poultry production, delivering affordable, healthy produce to families while
                 supporting livelihoods.
