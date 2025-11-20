@@ -121,11 +121,14 @@ export function HeroSection() {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Button
+                    component="a"
+                    href="tel:+254769412626"
                     size="lg"
                     radius="md"
                     style={{
                       background: 'linear-gradient(135deg, #ffa500, #ff8c00)',
                       border: 'none',
+                      textDecoration: 'none',
                     }}
                     fw={600}
                   >
