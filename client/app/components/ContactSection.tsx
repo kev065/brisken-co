@@ -55,7 +55,7 @@ export function ContactSection() {
     {
       icon: IconPhone,
       title: 'Phone',
-      value: 'Call us for enquiries',
+      value: '+254 769 412626',
       desc: 'Available during business hours',
     },
     {
@@ -193,9 +193,17 @@ export function ContactSection() {
                       <Text fw={700} size="lg" mb={8}>
                         {method.title}
                       </Text>
-                      <Text size="sm" fw={600} mb={4}>
-                        {method.value}
-                      </Text>
+                      {method.title === 'Phone' ? (
+                        <a href="tel:+254769412626" style={{ textDecoration: 'none', color: 'inherit' }}>
+                          <Text size="sm" fw={600} mb={4} style={{ cursor: 'pointer' }}>
+                            {method.value}
+                          </Text>
+                        </a>
+                      ) : (
+                        <Text size="sm" fw={600} mb={4}>
+                          {method.value}
+                        </Text>
+                      )}
                       <Text size="sm" opacity={0.8}>
                         {method.desc}
                       </Text>
