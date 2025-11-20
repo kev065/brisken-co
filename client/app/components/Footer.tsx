@@ -1,7 +1,8 @@
 'use client';
 
-import { Container, Group, Stack, Text, Divider, Box } from '@mantine/core';
+import { Container, Group, Stack, Text, Divider, Box, ActionIcon } from '@mantine/core';
 import { motion } from 'framer-motion';
+import { IconBrandFacebook } from '@tabler/icons-react';
 
 export function Footer() {
   const containerVariants = {
@@ -154,6 +155,28 @@ export function Footer() {
             variants={itemVariants}
             style={{ textAlign: 'center', opacity: 0.8 }}
           >
+            <Group justify="center" mb={20}>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <ActionIcon
+                  component="a"
+                  href="https://www.facebook.com/profile.php?id=61571440331401"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  size="lg"
+                  radius="md"
+                  style={{
+                    background: '#f29418ff',
+                    color: 'white',
+                  }}
+                  aria-label="Visit our Facebook page"
+                >
+                  <IconBrandFacebook size={20} />
+                </ActionIcon>
+              </motion.div>
+            </Group>
             <Text size="sm">
               © {new Date().getFullYear()} Brisken Limited. All rights reserved.
             </Text>
