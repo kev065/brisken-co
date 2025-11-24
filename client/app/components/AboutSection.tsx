@@ -1,6 +1,6 @@
 'use client';
 
-import { Container, Stack, Text, Box, Card, Group, Badge } from '@mantine/core';
+import { Container, Stack, Text, Box, Card, Group, Badge, Grid } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { IconPackage, IconTruck, IconCircleCheck } from '@tabler/icons-react';
 
@@ -49,7 +49,7 @@ export function AboutSection() {
       id="about"
       style={{
         background: '#f8f9fa',
-        padding: '80px 0',
+        padding: '100px 0',
       }}
     >
       <Container size="lg">
@@ -60,46 +60,34 @@ export function AboutSection() {
           viewport={{ once: true, margin: '-100px' }}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} style={{ marginBottom: '60px' }}>
-            <Stack gap={12} align="flex-start">
+          <motion.div variants={itemVariants} style={{ marginBottom: '60px', textAlign: 'center' }}>
+            <Stack gap={16} align="center">
               <Badge
                 size="lg"
+                variant="light"
+                color="blue"
                 style={{
-                  background: 'linear-gradient(135deg, #ffa500, #ffed1a)',
-                  color: '#333',
+                  textTransform: 'uppercase',
+                  letterSpacing: '1px',
                 }}
               >
                 About Us
               </Badge>
               <Text
-                size="2.5rem"
+                size="3rem"
                 fw={800}
-                style={{ color: '#1565c0' }}
+                style={{ color: '#1a1a1a', lineHeight: 1.2 }}
               >
                 Welcome to Brisken Limited
+              </Text>
+              <Text size="xl" c="dimmed" maw={700}>
+                Your trusted partner in poultry production. We provide quality day-old chicks, eggs, and feed to support Kenyan families and farmers.
               </Text>
             </Stack>
           </motion.div>
 
-          {/* Main Content */}
-          <motion.div variants={itemVariants} style={{ marginBottom: '40px' }}>
-            <Text size="lg" style={{ lineHeight: 1.8, color: '#333' }} maw={800}>
-              Brisken Limited is a Kenyan poultry company providing quality day-old chicks, eggs,
-              and feed. We provide affordable, healthy produce to Kenyan families while supporting
-              livelihoods and generating income opportunities.
-            </Text>
-          </motion.div>
-
-          <motion.div variants={itemVariants} style={{ marginBottom: '60px' }}>
-            <Text size="lg" style={{ lineHeight: 1.8, color: '#333' }} maw={800}>
-              We're excited to introduce you to our hatchery and retail services, where you can
-              find the latest hatch dates and availability schedules. Our eggs and poultry feed
-              are in stock now. Simply call us for enquiries.
-            </Text>
-          </motion.div>
-
           {/* Features Grid */}
-          <Group grow mb={60}>
+          <Group grow mb={80}>
             {features.map((feature, idx) => {
               const Icon = feature.icon;
               return (
@@ -110,16 +98,12 @@ export function AboutSection() {
                 >
                   <Card
                     shadow="sm"
-                    padding="lg"
-                    radius="md"
+                    padding="xl"
+                    radius="lg"
                     style={{
-                      border: '2px solid #e9ecef',
+                      border: '1px solid #eee',
                       background: 'white',
-                      minHeight: '200px',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'center',
-                      alignItems: 'center',
+                      height: '100%',
                       textAlign: 'center',
                     }}
                   >
@@ -129,16 +113,25 @@ export function AboutSection() {
                       transition={{ type: 'spring', stiffness: 200, damping: 15 }}
                       viewport={{ once: true }}
                     >
-                      <Icon
-                        size={48}
-                        color="#ffa500"
-                        style={{ marginBottom: '12px' }}
-                      />
+                      <Box
+                        style={{
+                          display: 'inline-flex',
+                          padding: '16px',
+                          borderRadius: '50%',
+                          background: '#fff4e6',
+                          marginBottom: '20px'
+                        }}
+                      >
+                        <Icon
+                          size={32}
+                          color="#ffa500"
+                        />
+                      </Box>
                     </motion.div>
-                    <Text fw={700} size="lg" mb={8}>
+                    <Text fw={700} size="xl" mb={8} c="dark">
                       {feature.title}
                     </Text>
-                    <Text size="sm" c="dimmed">
+                    <Text size="md" c="dimmed">
                       {feature.description}
                     </Text>
                   </Card>
@@ -152,58 +145,63 @@ export function AboutSection() {
             <Box
               style={{
                 background: 'white',
-                borderRadius: '12px',
-                padding: '40px',
-                border: '2px solid #e9ecef',
+                borderRadius: '24px',
+                padding: '60px',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
               }}
             >
-              <Text fw={700} size="lg" mb={24} style={{ color: '#1565c0' }}>
-                Our Products and Services
-              </Text>
-              <Stack gap={20}>
-                <motion.div variants={itemVariants}>
-                  <Text fw={600} size="md" mb={12} style={{ color: '#ffa500' }}>
-                    Main Products
+              <Grid gutter={60}>
+                <Grid.Col span={{ base: 12, md: 6 }}>
+                  <Text fw={800} size="2rem" mb={24} style={{ color: '#1a1a1a' }}>
+                    Our Products
                   </Text>
-                  <Stack gap={8}>
-                    <Text size="sm" style={{ color: '#333' }}>
-                      ✓ Fresh and nutritious eggs
-                    </Text>
-                    <Text size="sm" style={{ color: '#333' }}>
-                      ✓ High-quality day-old chicks
-                    </Text>
-                    <Text size="sm" style={{ color: '#333' }}>
-                      ✓ Chick starter, grower, pullet developer
-                    </Text>
-                    <Text size="sm" style={{ color: '#333' }}>
-                      ✓ Layer mash, broiler starter, grower, and finisher
-                    </Text>
+                  <Stack gap={16}>
+                    <Group>
+                      <IconCircleCheck size={24} color="#ffa500" />
+                      <Text size="lg" fw={500}>Fresh and nutritious eggs</Text>
+                    </Group>
+                    <Group>
+                      <IconCircleCheck size={24} color="#ffa500" />
+                      <Text size="lg" fw={500}>High-quality day-old chicks</Text>
+                    </Group>
+                    <Group>
+                      <IconCircleCheck size={24} color="#ffa500" />
+                      <Text size="lg" fw={500}>Chick starter, grower, pullet developer</Text>
+                    </Group>
+                    <Group>
+                      <IconCircleCheck size={24} color="#ffa500" />
+                      <Text size="lg" fw={500}>Layer mash, broiler starter, grower & finisher</Text>
+                    </Group>
                   </Stack>
-                </motion.div>
-
-                <motion.div variants={itemVariants}>
-                  <Text fw={600} size="md" mb={12} style={{ color: '#ffa500' }}>
-                    Additional Services
+                </Grid.Col>
+                <Grid.Col span={{ base: 12, md: 6 }}>
+                  <Text fw={800} size="2rem" mb={24} style={{ color: '#1a1a1a' }}>
+                    Our Services
                   </Text>
-                  <Stack gap={8}>
-                    <Text size="sm" style={{ color: '#333' }}>
-                      ✓ Biosecurity and disinfectant products
-                    </Text>
-                    <Text size="sm" style={{ color: '#333' }}>
-                      ✓ Brooder kits and accessories
-                    </Text>
-                    <Text size="sm" style={{ color: '#333' }}>
-                      ✓ Feeders, waterers, and fencing
-                    </Text>
-                    <Text size="sm" style={{ color: '#333' }}>
-                      ✓ Incubators and supplies
-                    </Text>
-                    <Text size="sm" style={{ color: '#333' }}>
-                      ✓ Treatments, supplements, and remedies
-                    </Text>
+                  <Stack gap={16}>
+                    <Group>
+                      <IconCircleCheck size={24} color="#2196f3" />
+                      <Text size="lg" fw={500}>Biosecurity and disinfectant products</Text>
+                    </Group>
+                    <Group>
+                      <IconCircleCheck size={24} color="#2196f3" />
+                      <Text size="lg" fw={500}>Brooder kits & accessories</Text>
+                    </Group>
+                    <Group>
+                      <IconCircleCheck size={24} color="#2196f3" />
+                      <Text size="lg" fw={500}>Feeders, waterers, and fencing</Text>
+                    </Group>
+                    <Group>
+                      <IconCircleCheck size={24} color="#2196f3" />
+                      <Text size="lg" fw={500}>Incubators and supplies</Text>
+                    </Group>
+                    <Group>
+                      <IconCircleCheck size={24} color="#2196f3" />
+                      <Text size="lg" fw={500}>Treatments, supplements, and remedies</Text>
+                    </Group>
                   </Stack>
-                </motion.div>
-              </Stack>
+                </Grid.Col>
+              </Grid>
             </Box>
           </motion.div>
         </motion.div>

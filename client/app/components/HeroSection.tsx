@@ -29,7 +29,7 @@ export function HeroSection() {
       component="section"
       style={{
         color: 'white',
-        minHeight: '60vh',
+        minHeight: '80vh',
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
@@ -44,16 +44,16 @@ export function HeroSection() {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: 'url(/images/chicken1.webp)',
+          backgroundImage: 'url(/images/hero_poultry_farm.png)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center right',
+          backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
           opacity: 1,
           zIndex: 0,
         }}
       />
 
-      {/* Blue gradient overlay to ensure readability and maintain theme */}
+      {/* Darker overlay for better text contrast */}
       <Box
         style={{
           position: 'absolute',
@@ -61,43 +61,9 @@ export function HeroSection() {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'linear-gradient(135deg, rgba(33, 150, 243, 0.01) 0%, rgba(66, 165, 245, 0.01) 50%, rgba(100, 181, 246, 0.01) 100%)',
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%)',
           zIndex: 0,
         }}
-      />
-
-      {/* Animated background circles */}
-      <motion.div
-        style={{
-          position: 'absolute',
-          width: '300px',
-          height: '300px',
-          borderRadius: '50%',
-          background: 'rgba(255, 165, 0, 0.1)',
-          top: '-100px',
-          right: '-100px',
-        }}
-        animate={{
-          y: [0, 30, 0],
-          x: [0, 20, 0],
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-      />
-      <motion.div
-        style={{
-          position: 'absolute',
-          width: '250px',
-          height: '250px',
-          borderRadius: '50%',
-          background: 'rgba(255, 237, 26, 0.1)',
-          bottom: '-50px',
-          left: '10%',
-        }}
-        animate={{
-          y: [0, -30, 0],
-          x: [0, -20, 0],
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
       />
 
       <Container size="lg" style={{ position: 'relative', zIndex: 1 }}>
@@ -106,35 +72,34 @@ export function HeroSection() {
           initial="hidden"
           animate="visible"
         >
-          <Stack gap={30}>
+          <Stack gap={24} maw={700}>
             <motion.div variants={itemVariants}>
               <Text
-                size="4rem"
-                fw={800}
+                size="4.5rem"
+                fw={900}
                 lh={1.1}
                 c="white"
                 style={{
-                  fontSize: 'clamp(1.75rem, 5vw, 4rem)',
-                  textShadow: '0 2px 8px rgba(0, 0, 0, 0.7), 0 4px 12px rgba(0, 0, 0, 0.5)',
+                  fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+                  textShadow: '0 4px 16px rgba(0, 0, 0, 0.6)',
+                  letterSpacing: '-0.02em',
                 }}
               >
-                Premium Poultry Solutions for Kenyan Families
+                Premium Poultry for Kenyan Families
               </Text>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Text 
-                size="lg" 
-                opacity={0.95} 
-                maw={600} 
+              <Text
+                size="xl"
+                opacity={0.95}
                 c="white"
                 style={{
-                  textShadow: '0 2px 6px rgba(0, 0, 0, 0.7), 0 3px 10px rgba(0, 0, 0, 0.5)',
+                  textShadow: '0 2px 8px rgba(0, 0, 0, 0.6)',
+                  fontWeight: 500,
                 }}
               >
-                Quality day-old chicks, fresh eggs, and premium feed. Your trusted partner in
-                poultry production, delivering affordable, healthy produce to families while
-                supporting livelihoods.
+                Quality day-old chicks, fresh eggs, and premium feed. Trusted by farmers, loved by families.
               </Text>
             </motion.div>
 
@@ -142,6 +107,7 @@ export function HeroSection() {
               variants={itemVariants}
               style={{
                 display: 'flex',
+                marginTop: '16px',
               }}
             >
               <Group>
@@ -152,16 +118,17 @@ export function HeroSection() {
                   <Button
                     component="a"
                     href="tel:+254769412626"
-                    size="lg"
+                    size="xl"
                     radius="md"
                     style={{
-                      background: 'linear-gradient(135deg, #ffa500, #ff8c00)',
+                      background: '#ffa500',
+                      color: 'white',
                       border: 'none',
-                      textDecoration: 'none',
+                      boxShadow: '0 4px 14px rgba(0,0,0,0.3)',
                     }}
-                    fw={600}
+                    fw={700}
                   >
-                    Call Us for Enquiries
+                    Order Now
                   </Button>
                 </motion.div>
               </Group>

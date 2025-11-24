@@ -1,6 +1,6 @@
 'use client';
 
-import { Container, Stack, Text, Box, Card, Grid, Badge, Group } from '@mantine/core';
+import { Container, Stack, Text, Box, Card, Grid, Badge, Group, Button } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { IconBulb, IconTrendingUp, IconUsers, IconTarget } from '@tabler/icons-react';
 
@@ -29,45 +29,22 @@ export function ExploreSection() {
     {
       icon: IconUsers,
       title: 'Farmer Partnerships',
-      description:
-        'Partner with us to access quality chicks, feed, and support. Grow your farm profitably with our proven systems.',
-      features: [
-        'Reliable supply chain',
-        'Technical support',
-        'Competitive pricing',
-        'Regular training',
-      ],
+      description: 'Access quality chicks and support to grow your farm.',
     },
     {
       icon: IconTarget,
       title: 'Retail & Distribution',
-      description:
-        'Become a Brisken retailer and tap into the growing poultry market. Enjoy good margins and dedicated support.',
-      features: [
-        'Wholesale pricing',
-        'Marketing support',
-        'Territory protection',
-        'Training programs',
-      ],
+      description: 'Become a retailer and tap into the poultry market.',
     },
     {
       icon: IconTrendingUp,
       title: 'Feed Dealers',
-      description:
-        'Supply quality feed to farmers in your area. Build a sustainable business with Brisken premium products.',
-      features: [
-        'High-quality products',
-        'Fleet support',
-        'Promotional materials',
-        'Growth incentives',
-      ],
+      description: 'Supply premium feed to farmers in your area.',
     },
     {
       icon: IconBulb,
       title: 'Custom Solutions',
-      description:
-        'Looking for something specific? We offer custom feed formulations and tailored packages for unique needs.',
-      features: ['Customized feed', 'Bulk orders', 'Flexible terms', 'Expert advice'],
+      description: 'Tailored feed formulations for specific needs.',
     },
   ];
 
@@ -77,7 +54,7 @@ export function ExploreSection() {
       id="opportunities"
       style={{
         background: 'white',
-        padding: '80px 0',
+        padding: '100px 0',
       }}
     >
       <Container size="lg">
@@ -88,104 +65,86 @@ export function ExploreSection() {
           viewport={{ once: true, margin: '-100px' }}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} style={{ marginBottom: '60px' }}>
-            <Stack gap={12} align="flex-start">
+          <motion.div variants={itemVariants} style={{ marginBottom: '60px', textAlign: 'center' }}>
+            <Stack gap={16} align="center">
               <Badge
                 size="lg"
+                variant="light"
+                color="orange"
                 style={{
-                  background: 'linear-gradient(135deg, #ffa500, #ffed1a)',
-                  color: '#333',
+                  textTransform: 'uppercase',
+                  letterSpacing: '1px',
                 }}
               >
                 Opportunities
               </Badge>
               <Text
-                size="2.5rem"
+                size="3rem"
                 fw={800}
-                style={{ color: '#1565c0' }}
+                style={{ color: '#1a1a1a', lineHeight: 1.2 }}
               >
                 Grow With Brisken
               </Text>
-              <Text size="lg" c="dimmed" maw={700}>
-                We're committed to creating opportunities for farmers, retailers, and businesses
-                to thrive in the poultry industry.
+              <Text size="xl" c="dimmed" maw={700}>
+                We create opportunities for farmers, retailers, and businesses to thrive in the poultry industry.
               </Text>
             </Stack>
           </motion.div>
 
           {/* Opportunities Grid */}
-          <Grid gutter={24} mb={60}>
+          <Grid gutter={32} mb={80}>
             {opportunities.map((opp, idx) => {
               const Icon = opp.icon;
               return (
-                <Grid.Col key={idx} span={{ base: 12, sm: 6, md: 6 }}>
+                <Grid.Col key={idx} span={{ base: 12, sm: 6, md: 3 }}>
                   <motion.div
                     variants={itemVariants}
-                    whileHover={{ y: -12, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
+                    whileHover={{ y: -12 }}
                     transition={{ duration: 0.3 }}
                   >
                     <Card
                       shadow="sm"
-                      padding="lg"
-                      radius="md"
+                      padding="xl"
+                      radius="lg"
                       style={{
-                        border: '2px solid #e9ecef',
+                        border: '1px solid #eee',
                         background: 'white',
                         height: '100%',
                         display: 'flex',
                         flexDirection: 'column',
+                        alignItems: 'center',
+                        textAlign: 'center',
                       }}
                     >
                       <motion.div
-                        initial={{ scale: 0, rotate: -180 }}
-                        whileInView={{ scale: 1, rotate: 0 }}
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
                         transition={{ type: 'spring', stiffness: 200, damping: 20 }}
                         viewport={{ once: true }}
                       >
                         <div
                           style={{
-                            width: '56px',
-                            height: '56px',
-                            borderRadius: '12px',
-                            background: 'linear-gradient(135deg, #ffa500, #ffed1a)',
+                            width: '64px',
+                            height: '64px',
+                            borderRadius: '16px',
+                            background: '#fff4e6',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            marginBottom: '16px',
+                            marginBottom: '24px',
                           }}
                         >
-                          <Icon size={32} color="white" />
+                          <Icon size={32} color="#ffa500" />
                         </div>
                       </motion.div>
 
-                      <Text fw={700} size="lg" mb={8} style={{ color: '#1565c0' }}>
+                      <Text fw={700} size="lg" mb={12} style={{ color: '#1a1a1a' }}>
                         {opp.title}
                       </Text>
 
-                      <Text size="sm" c="dimmed" mb={20}>
+                      <Text size="md" c="dimmed">
                         {opp.description}
                       </Text>
-
-                      <Stack gap={8} style={{ marginTop: 'auto' }}>
-                        <Text fw={600} size="sm" style={{ color: '#ffa500' }}>
-                          Key Benefits:
-                        </Text>
-                        {opp.features.map((feature, i) => (
-                          <Group key={i} gap={8}>
-                            <div
-                              style={{
-                                width: '6px',
-                                height: '6px',
-                                borderRadius: '50%',
-                                background: '#2196f3',
-                              }}
-                            />
-                            <Text size="sm" style={{ color: '#555' }}>
-                              {feature}
-                            </Text>
-                          </Group>
-                        ))}
-                      </Stack>
                     </Card>
                   </motion.div>
                 </Grid.Col>
@@ -197,23 +156,34 @@ export function ExploreSection() {
           <motion.div variants={itemVariants}>
             <Box
               style={{
-                background: 'linear-gradient(135deg, #ffa500 0%, #ffed1a 100%)',
-                borderRadius: '12px',
-                padding: '40px',
+                background: 'linear-gradient(135deg, #1a1a1a 0%, #333 100%)',
+                borderRadius: '24px',
+                padding: '60px',
                 textAlign: 'center',
+                color: 'white',
               }}
             >
-              <Stack gap={16} align="center">
-                <Text fw={700} size="lg" style={{ color: '#333' }}>
-                  Ready to Grow With Us?
+              <Stack gap={24} align="center">
+                <Text fw={800} size="2.5rem">
+                  Ready to Partner With Us?
                 </Text>
-                <Text size="lg" style={{ color: '#555' }}>
-                  Contact us today to explore partnership opportunities and take your business to
-                  the next level.
+                <Text size="xl" style={{ color: '#ccc' }} maw={600}>
+                  Contact us today to explore partnership opportunities and take your business to the next level.
                 </Text>
-                <Text fw={600} style={{ color: '#1565c0', fontSize: '1.2rem' }}>
-                  Call us now for more information!
-                </Text>
+                <Button
+                  component="a"
+                  href="tel:+254769412626"
+                  size="xl"
+                  radius="md"
+                  style={{
+                    background: '#ffa500',
+                    color: 'white',
+                    border: 'none',
+                  }}
+                  fw={700}
+                >
+                  Contact Us
+                </Button>
               </Stack>
             </Box>
           </motion.div>
