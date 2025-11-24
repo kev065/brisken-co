@@ -1,6 +1,6 @@
 'use client';
 
-import { Container, Title, Text, List, ThemeIcon, Box, Grid, Card, Group } from '@mantine/core';
+import { Container, Title, Text, List, ThemeIcon, Box, Grid, Card, Group, Button } from '@mantine/core';
 import { IconCheck, IconCircleCheck } from '@tabler/icons-react';
 import { NavigationHeader } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -81,6 +81,23 @@ export default function OpportunitiesPage() {
                             </Card>
                         </Grid.Col>
                     </Grid>
+
+                    <Group justify="center" mt={60}>
+                        <Button
+                            component="a"
+                            href="tel:+254769412626"
+                            size="xl"
+                            radius="md"
+                            color="orange"
+                            variant="filled"
+                            style={{
+                                boxShadow: '0 4px 12px rgba(255, 165, 0, 0.3)',
+                                transition: 'transform 0.2s ease',
+                            }}
+                        >
+                            Call for Enquiries
+                        </Button>
+                    </Group>
                 </Container>
             </Box>
             <Footer />
