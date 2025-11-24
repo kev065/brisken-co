@@ -1,6 +1,7 @@
 'use client';
 
 import { Container, Group, Stack, Text, Divider, Box, ActionIcon } from '@mantine/core';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { IconBrandFacebook } from '@tabler/icons-react';
 
@@ -74,21 +75,21 @@ export function Footer() {
                 <Text fw={700} size="sm" mb="sm">
                   QUICK LINKS
                 </Text>
-                <a href="#about" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link href="/opportunities" style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
-                    About Us
+                    Opportunities
                   </Text>
-                </a>
-                <a href="#nutrition" style={{ textDecoration: 'none', color: 'inherit' }}>
+                </Link>
+                <Link href="/nutrition" style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
-                    Products
+                    Nutrition
                   </Text>
-                </a>
-                <a href="#contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+                </Link>
+                <Link href="/sustainability" style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
-                    Contact
+                    Sustainability
                   </Text>
-                </a>
+                </Link>
               </Stack>
             </motion.div>
           </Stack>
@@ -130,21 +131,21 @@ export function Footer() {
                 <Text fw={700} size="sm" mb="sm">
                   QUICK LINKS
                 </Text>
-                <a href="#about" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link href="/opportunities" style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
-                    About Us
+                    Opportunities
                   </Text>
-                </a>
-                <a href="#nutrition" style={{ textDecoration: 'none', color: 'inherit' }}>
+                </Link>
+                <Link href="/nutrition" style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
-                    Products
+                    Nutrition
                   </Text>
-                </a>
-                <a href="#contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+                </Link>
+                <Link href="/sustainability" style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
-                    Contact
+                    Sustainability
                   </Text>
-                </a>
+                </Link>
               </Stack>
             </motion.div>
           </Group>

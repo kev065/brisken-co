@@ -166,7 +166,11 @@ export function AboutSection() {
                     </Group>
                     <Group>
                       <IconCircleCheck size={24} color="#ffa500" />
-                      <Text size="lg" fw={500}>Complete range of poultry feed</Text>
+                      <Text size="lg" fw={500}>Chick starter, grower, pullet developer</Text>
+                    </Group>
+                    <Group>
+                      <IconCircleCheck size={24} color="#ffa500" />
+                      <Text size="lg" fw={500}>Layer mash, broiler starter, grower & finisher</Text>
                     </Group>
                   </Stack>
                 </Grid.Col>
@@ -177,15 +181,23 @@ export function AboutSection() {
                   <Stack gap={16}>
                     <Group>
                       <IconCircleCheck size={24} color="#2196f3" />
-                      <Text size="lg" fw={500}>Biosecurity consultation</Text>
+                      <Text size="lg" fw={500}>Biosecurity and disinfectant products</Text>
                     </Group>
                     <Group>
                       <IconCircleCheck size={24} color="#2196f3" />
-                      <Text size="lg" fw={500}>Equipment and accessories</Text>
+                      <Text size="lg" fw={500}>Brooder kits & accessories</Text>
                     </Group>
                     <Group>
                       <IconCircleCheck size={24} color="#2196f3" />
-                      <Text size="lg" fw={500}>Expert farming advice</Text>
+                      <Text size="lg" fw={500}>Feeders, waterers, and fencing</Text>
+                    </Group>
+                    <Group>
+                      <IconCircleCheck size={24} color="#2196f3" />
+                      <Text size="lg" fw={500}>Incubators and supplies</Text>
+                    </Group>
+                    <Group>
+                      <IconCircleCheck size={24} color="#2196f3" />
+                      <Text size="lg" fw={500}>Treatments, supplements, and remedies</Text>
                     </Group>
                   </Stack>
                 </Grid.Col>
