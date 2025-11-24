@@ -2,13 +2,13 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import NextImage from 'next/image';
 import {
   Container,
   Group,
   Burger,
   Drawer,
   Stack,
-  Text,
   Box,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
@@ -59,12 +59,19 @@ export function NavigationHeader() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="/" style={{ textDecoration: 'none' }}>
-              <Group gap={8}>
-                <Text fw={700} size="lg" style={{ color: '#ffa500' }}>
-                  Brisken Ltd
-                </Text>
-              </Group>
+            <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+              <NextImage
+                src="/images/brisken_logo.webp"
+                alt="Brisken Ltd Logo"
+                width={200}
+                height={70}
+                style={{
+                  height: 'clamp(35px, 8vw, 60px)',
+                  width: 'auto',
+                  objectFit: 'contain',
+                }}
+                priority
+              />
             </Link>
           </motion.div>
 
