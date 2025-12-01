@@ -6,6 +6,7 @@ import "./globals.css";
 import { theme } from "./theme";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 import { MicrosoftClarity } from "./components/MicrosoftClarity";
+import { NavigationHeader, Footer } from "./components";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +42,11 @@ export default function RootLayout({
         style={{ paddingTop: '80px' }}
       >
         <MantineProvider theme={theme}>
-          {children}
+          <NavigationHeader />
+          <main className="flex flex-col w-full min-h-screen">
+            {children}
+          </main>
+          <Footer />
         </MantineProvider>
       </body>
     </html>
