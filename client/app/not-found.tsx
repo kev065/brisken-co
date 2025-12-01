@@ -107,7 +107,7 @@ export default function NotFound() {
     return (
         <div
             ref={containerRef}
-            className="min-h-[80vh] w-full flex flex-col items-center justify-center relative overflow-hidden bg-[#fffdf0]"
+            className="flex-1 w-full flex flex-col items-center justify-start pt-20 pb-20 relative overflow-hidden bg-[#fffdf0]"
         >
             {/* Vibrant Background Elements */}
             <div
