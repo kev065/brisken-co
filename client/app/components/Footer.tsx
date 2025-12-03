@@ -28,7 +28,6 @@ export function Footer() {
       style={{
         background: 'linear-gradient(135deg, #1565c0 0%, #2196f3 100%)',
         color: 'white',
-        marginTop: '80px',
       }}
     >
       <Container size="lg" py={50}>
