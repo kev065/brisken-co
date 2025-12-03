@@ -122,8 +122,8 @@ export function ContactSection() {
       component="section"
       id="contact"
       style={{
-        background: 'linear-gradient(135deg, #2196f3 0%, #42a5f5 100%)',
-        padding: '80px 0',
+        background: 'linear-gradient(135deg, #1565c0 0%, #2196f3 100%)',
+        padding: '80px 0 0 0',
         color: 'white',
       }}
     >
