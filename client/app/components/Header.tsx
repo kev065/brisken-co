@@ -15,11 +15,11 @@ import { useDisclosure } from '@mantine/hooks';
 import { motion } from 'framer-motion';
 
 const navLinks = [
-  { label: 'About Us', href: '#about' },
-  { label: 'Explore', href: '#opportunities' },
-  { label: 'Nutrition', href: '#nutrition' },
-  { label: 'Sustainability', href: '#sustainability' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Explore', href: '/#opportunities' },
+  { label: 'Nutrition', href: '/#nutrition' },
+  { label: 'Sustainability', href: '/#sustainability' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 export function NavigationHeader() {
