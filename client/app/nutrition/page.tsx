@@ -2,8 +2,6 @@
 
 import { Container, Title, Text, List, ThemeIcon, Box, SimpleGrid, Card, Group, Button } from '@mantine/core';
 import { IconLeaf } from '@tabler/icons-react';
-import { NavigationHeader } from '../components/Header';
-import { Footer } from '../components/Footer';
 
 export default function NutritionPage() {
     const feedProducts = [
@@ -18,7 +16,6 @@ export default function NutritionPage() {
 
     return (
         <>
-            <NavigationHeader />
             <Box pt={120} pb={80}>
                 <Container size="lg">
                     <Title order={1} mb={30} style={{ color: '#2e7d32' }}>
@@ -71,7 +68,6 @@ export default function NutritionPage() {
                     </Group>
                 </Container>
             </Box>
-            <Footer />
         </>
     );
 }

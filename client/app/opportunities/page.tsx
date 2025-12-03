@@ -2,13 +2,10 @@
 
 import { Container, Title, Text, List, ThemeIcon, Box, Grid, Card, Group, Button } from '@mantine/core';
 import { IconCheck, IconCircleCheck } from '@tabler/icons-react';
-import { NavigationHeader } from '../components/Header';
-import { Footer } from '../components/Footer';
 
 export default function OpportunitiesPage() {
     return (
         <>
-            <NavigationHeader />
             <Box pt={120} pb={80}>
                 <Container size="lg">
                     <Title order={1} mb={30} style={{ color: '#1a1a1a' }}>
@@ -100,7 +97,6 @@ export default function OpportunitiesPage() {
                     </Group>
                 </Container>
             </Box>
-            <Footer />
         </>
     );
 }
