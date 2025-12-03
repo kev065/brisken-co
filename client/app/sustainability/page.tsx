@@ -2,8 +2,6 @@
 
 import { Container, Title, Text, List, ThemeIcon, Box, Alert, Grid, Card, Group, Button } from '@mantine/core';
 import { IconShieldCheck, IconAlertCircle } from '@tabler/icons-react';
-import { NavigationHeader } from '../components/Header';
-import { Footer } from '../components/Footer';
 
 export default function SustainabilityPage() {
     const diseaseSigns = [
@@ -19,7 +17,6 @@ export default function SustainabilityPage() {
 
     return (
         <>
-            <NavigationHeader />
             <Box pt={120} pb={80}>
                 <Container size="lg">
                     <Title order={1} mb={30} style={{ color: '#c62828' }}>
@@ -101,7 +98,6 @@ export default function SustainabilityPage() {
                     </Group>
                 </Container>
             </Box>
-            <Footer />
         </>
     );
 }
