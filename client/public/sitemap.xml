@@ -55,6 +55,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://brisken.co.ke/quality-assurance</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://brisken.co.ke/favicon.ico</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
