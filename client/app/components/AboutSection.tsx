@@ -81,7 +81,7 @@ export function AboutSection() {
                 Welcome to Brisken Limited
               </Text>
               <Text size="xl" c="dimmed" maw={700}>
-                Your trusted partner in poultry production. We provide quality day-old chicks, eggs, and feed to support Kenyan families and farmers.
+                Quality day-old chicks, fresh eggs, and premium feed. Trusted by farmers, loved by families.
               </Text>
             </Stack>
           </motion.div>

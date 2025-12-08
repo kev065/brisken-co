@@ -89,6 +89,11 @@ export function Footer() {
                     Sustainability
                   </Text>
                 </Link>
+                <Link href="/quality-assurance" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
+                    Quality Assurance
+                  </Text>
+                </Link>
               </Stack>
             </motion.div>
           </Stack>
@@ -143,6 +148,11 @@ export function Footer() {
                 <Link href="/sustainability" style={{ textDecoration: 'none', color: 'inherit' }}>
                   <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
                     Sustainability
+                  </Text>
+                </Link>
+                <Link href="/quality-assurance" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Text size="sm" opacity={0.9} style={{ cursor: 'pointer' }}>
+                    Quality Assurance
                   </Text>
                 </Link>
               </Stack>
