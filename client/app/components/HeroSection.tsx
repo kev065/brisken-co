@@ -99,7 +99,7 @@ export function HeroSection() {
                   fontWeight: 500,
                 }}
               >
-                Quality day-old chicks, fresh eggs, and premium feed. Trusted by farmers, loved by families.
+                Your trusted partner in poultry production. We provide quality day-old chicks, eggs, and poultry feed to support families and farmers
               </Text>
             </motion.div>
 
